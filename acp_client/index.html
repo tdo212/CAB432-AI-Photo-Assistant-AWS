@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A small web client for the Agent Client Protocol" />
+    <title>ACP Chat</title>
+    <link rel="stylesheet" href="/web/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="page-header">
+        <div>
+          <p class="eyebrow">Agent Client Protocol</p>
+          <h1>ACP Chat</h1>
+          <p class="subtitle">A deliberately small browser client for text and image conversations.</p>
+        </div>
+        <div class="header-actions">
+          <button id="theme-toggle" class="secondary" type="button" data-dark-label="Dark mode" data-light-label="Light mode" aria-pressed="false">Dark mode</button>
+          <div id="connection-status" class="status status-idle" role="status">Disconnected</div>
+        </div>
+      </header>
+
+      <section id="messages" class="messages" aria-live="polite" aria-label="Conversation">
+        <div class="empty-state">
+          <strong>Connected.</strong>
+          <span>Send a message to the ACP agent.</span>
+        </div>
+      </section>
+
+      <form id="prompt-form" class="composer">
+        <label class="sr-only" for="prompt">Message</label>
+        <textarea id="prompt" rows="3" placeholder="Send a message…" disabled></textarea>
+        <div id="attachment" class="attachment" hidden></div>
+        <input id="file-input" type="file" accept="image/*" hidden />
+        <div class="composer-footer">
+          <span class="hint">Enter sends · Shift+Enter adds a new line</span>
+          <div class="composer-actions">
+            <button id="attach" type="button" class="secondary" disabled>Attach image</button>
+            <button id="cancel" type="button" class="secondary" disabled>Cancel</button>
+            <button id="send" type="submit" disabled>Send</button>
+          </div>
+        </div>
+      </form>
+    </main>
+    <script type="module" src="/web/main.ts"></script>
+  </body>
+</html>

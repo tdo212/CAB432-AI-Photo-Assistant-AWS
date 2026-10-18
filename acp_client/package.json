@@ -1,0 +1,28 @@
+{
+  "name": "acp-chat-web-client",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A small browser ACP client and deterministic ACP server for testing.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && tsc --noEmit",
+    "preview": "vite preview",
+    "server": "tsx server/deterministic-acp.ts",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@agentclientprotocol/sdk": "1.4.0",
+    "dompurify": "3.4.14",
+    "marked": "16.1.2",
+    "ws": "8.21.3"
+  },
+  "devDependencies": {
+    "@types/node": "24.3.0",
+    "@types/ws": "8.18.1",
+    "vite": "8.2.2",
+    "tsx": "4.20.3",
+    "typescript": "5.9.3",
+    "vitest": "3.2.7"
+  }
+}

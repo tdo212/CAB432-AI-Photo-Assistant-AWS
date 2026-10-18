@@ -1,0 +1,9 @@
+.vs/
+node_modules/
+dist/
+build/
+.env
+.env.local
+*.vsidx
+Thumbs.db
+.DS_Store
